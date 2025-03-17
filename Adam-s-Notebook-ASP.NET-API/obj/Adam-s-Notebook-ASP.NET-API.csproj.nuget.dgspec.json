@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Sharkore\\Web\\AdamNotebook\\Adam-s-Notebook-ASP.NET-API\\Adam-s-Notebook-ASP.NET-API\\Adam-s-Notebook-ASP.NET-API.csproj": {}
+    "c:\\Sharkore\\Web\\AdamNotebook\\Adam-s-Notebook-ASP.NET-API\\Adam-s-Notebook-ASP.NET-API\\Adam-s-Notebook-ASP.NET-API.csproj": {}
   },
   "projects": {
-    "C:\\Sharkore\\Web\\AdamNotebook\\Adam-s-Notebook-ASP.NET-API\\Adam-s-Notebook-ASP.NET-API\\Adam-s-Notebook-ASP.NET-API.csproj": {
+    "c:\\Sharkore\\Web\\AdamNotebook\\Adam-s-Notebook-ASP.NET-API\\Adam-s-Notebook-ASP.NET-API\\Adam-s-Notebook-ASP.NET-API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Sharkore\\Web\\AdamNotebook\\Adam-s-Notebook-ASP.NET-API\\Adam-s-Notebook-ASP.NET-API\\Adam-s-Notebook-ASP.NET-API.csproj",
+        "projectUniqueName": "c:\\Sharkore\\Web\\AdamNotebook\\Adam-s-Notebook-ASP.NET-API\\Adam-s-Notebook-ASP.NET-API\\Adam-s-Notebook-ASP.NET-API.csproj",
         "projectName": "Adam-s-Notebook-ASP.NET-API",
-        "projectPath": "C:\\Sharkore\\Web\\AdamNotebook\\Adam-s-Notebook-ASP.NET-API\\Adam-s-Notebook-ASP.NET-API\\Adam-s-Notebook-ASP.NET-API.csproj",
+        "projectPath": "c:\\Sharkore\\Web\\AdamNotebook\\Adam-s-Notebook-ASP.NET-API\\Adam-s-Notebook-ASP.NET-API\\Adam-s-Notebook-ASP.NET-API.csproj",
         "packagesPath": "C:\\Users\\julie\\.nuget\\packages\\",
-        "outputPath": "C:\\Sharkore\\Web\\AdamNotebook\\Adam-s-Notebook-ASP.NET-API\\Adam-s-Notebook-ASP.NET-API\\obj\\",
+        "outputPath": "c:\\Sharkore\\Web\\AdamNotebook\\Adam-s-Notebook-ASP.NET-API\\Adam-s-Notebook-ASP.NET-API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -49,16 +49,6 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
-          "dependencies": {
-            "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[9.0.3, )"
-            },
-            "Microsoft.EntityFrameworkCore.InMemory": {
-              "target": "Package",
-              "version": "[9.0.3, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
