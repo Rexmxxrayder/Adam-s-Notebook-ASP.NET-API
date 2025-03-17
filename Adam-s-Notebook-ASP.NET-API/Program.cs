@@ -17,7 +17,7 @@ app.UseCors("AllowAllOrigins");
 
 app.MapGet("/api/model", async () =>
 {
-    var filePath = "C://Sharkore//Web//AdamNotebook//Adam-s-Notebook-ASP.NET-API//Adam-s-Notebook-ASP.NET-API//Data//Models3D//LetterBoss//SM_Litterature_Blocking.fbx";
+    var filePath = "C://Sharkore//Web//AdamNotebook//Adam-s-Notebook-ASP.NET-API//Adam-s-Notebook-ASP.NET-API//Data//Models3D//LetterBoss//LetterBoss.glb";
 
     if (File.Exists(filePath))
     {
