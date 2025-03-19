@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "C:\\Sharkore\\Web\\AdamNotebook\\Adam-s-Notebook-ASP.NET-API\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D2FC1D34-59D3-439C-A512-F9A354CE4621}|Adam-s-Notebook-ASP.NET-API\\Adam-s-Notebook-ASP.NET-API.csproj|c:\\sharkore\\web\\adamnotebook\\adam-s-notebook-asp.net-api\\adam-s-notebook-asp.net-api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2FC1D34-59D3-439C-A512-F9A354CE4621}|Adam-s-Notebook-ASP.NET-API\\Adam-s-Notebook-ASP.NET-API.csproj|solutionrelative:adam-s-notebook-asp.net-api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D2FC1D34-59D3-439C-A512-F9A354CE4621}|Adam-s-Notebook-ASP.NET-API\\Adam-s-Notebook-ASP.NET-API.csproj|c:\\sharkore\\web\\adamnotebook\\adam-s-notebook-asp.net-api\\adam-s-notebook-asp.net-api\\model\\modelcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D2FC1D34-59D3-439C-A512-F9A354CE4621}|Adam-s-Notebook-ASP.NET-API\\Adam-s-Notebook-ASP.NET-API.csproj|solutionrelative:adam-s-notebook-asp.net-api\\model\\modelcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D2FC1D34-59D3-439C-A512-F9A354CE4621}|Adam-s-Notebook-ASP.NET-API\\Adam-s-Notebook-ASP.NET-API.csproj|c:\\sharkore\\web\\adamnotebook\\adam-s-notebook-asp.net-api\\adam-s-notebook-asp.net-api\\model\\model.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2FC1D34-59D3-439C-A512-F9A354CE4621}|Adam-s-Notebook-ASP.NET-API\\Adam-s-Notebook-ASP.NET-API.csproj|solutionrelative:adam-s-notebook-asp.net-api\\model\\model.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D2FC1D34-59D3-439C-A512-F9A354CE4621}|Adam-s-Notebook-ASP.NET-API\\Adam-s-Notebook-ASP.NET-API.csproj|c:\\sharkore\\web\\adamnotebook\\adam-s-notebook-asp.net-api\\adam-s-notebook-asp.net-api\\model\\threedmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2FC1D34-59D3-439C-A512-F9A354CE4621}|Adam-s-Notebook-ASP.NET-API\\Adam-s-Notebook-ASP.NET-API.csproj|solutionrelative:adam-s-notebook-asp.net-api\\model\\threedmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D2FC1D34-59D3-439C-A512-F9A354CE4621}|Adam-s-Notebook-ASP.NET-API\\Adam-s-Notebook-ASP.NET-API.csproj|c:\\sharkore\\web\\adamnotebook\\adam-s-notebook-asp.net-api\\adam-s-notebook-asp.net-api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2FC1D34-59D3-439C-A512-F9A354CE4621}|Adam-s-Notebook-ASP.NET-API\\Adam-s-Notebook-ASP.NET-API.csproj|solutionrelative:adam-s-notebook-asp.net-api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D2FC1D34-59D3-439C-A512-F9A354CE4621}|Adam-s-Notebook-ASP.NET-API\\Adam-s-Notebook-ASP.NET-API.csproj|c:\\sharkore\\web\\adamnotebook\\adam-s-notebook-asp.net-api\\adam-s-notebook-asp.net-api\\model\\texture.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2FC1D34-59D3-439C-A512-F9A354CE4621}|Adam-s-Notebook-ASP.NET-API\\Adam-s-Notebook-ASP.NET-API.csproj|solutionrelative:adam-s-notebook-asp.net-api\\model\\texture.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2FC1D34-59D3-439C-A512-F9A354CE4621}|Adam-s-Notebook-ASP.NET-API\\Adam-s-Notebook-ASP.NET-API.csproj|c:\\sharkore\\web\\adamnotebook\\adam-s-notebook-asp.net-api\\adam-s-notebook-asp.net-api\\migrations\\20250318111832_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2FC1D34-59D3-439C-A512-F9A354CE4621}|Adam-s-Notebook-ASP.NET-API\\Adam-s-Notebook-ASP.NET-API.csproj|solutionrelative:adam-s-notebook-asp.net-api\\migrations\\20250318111832_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,45 +30,70 @@
       "DocumentGroups": [
         {
           "DockedWidth": 207,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Texture.cs",
+              "DocumentMoniker": "C:\\Sharkore\\Web\\AdamNotebook\\Adam-s-Notebook-ASP.NET-API\\Adam-s-Notebook-ASP.NET-API\\Model\\Texture.cs",
+              "RelativeDocumentMoniker": "Adam-s-Notebook-ASP.NET-API\\Model\\Texture.cs",
+              "ToolTip": "C:\\Sharkore\\Web\\AdamNotebook\\Adam-s-Notebook-ASP.NET-API\\Adam-s-Notebook-ASP.NET-API\\Model\\Texture.cs",
+              "RelativeToolTip": "Adam-s-Notebook-ASP.NET-API\\Model\\Texture.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T15:16:39.424Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "20250318111832_InitialCreate.cs",
+              "DocumentMoniker": "C:\\Sharkore\\Web\\AdamNotebook\\Adam-s-Notebook-ASP.NET-API\\Adam-s-Notebook-ASP.NET-API\\Migrations\\20250318111832_InitialCreate.cs",
+              "RelativeDocumentMoniker": "Adam-s-Notebook-ASP.NET-API\\Migrations\\20250318111832_InitialCreate.cs",
+              "ToolTip": "C:\\Sharkore\\Web\\AdamNotebook\\Adam-s-Notebook-ASP.NET-API\\Adam-s-Notebook-ASP.NET-API\\Migrations\\20250318111832_InitialCreate.cs",
+              "RelativeToolTip": "Adam-s-Notebook-ASP.NET-API\\Migrations\\20250318111832_InitialCreate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-18T11:18:33.005Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Sharkore\\Web\\AdamNotebook\\Adam-s-Notebook-ASP.NET-API\\Adam-s-Notebook-ASP.NET-API\\Program.cs",
+              "RelativeDocumentMoniker": "Adam-s-Notebook-ASP.NET-API\\Program.cs",
+              "ToolTip": "C:\\Sharkore\\Web\\AdamNotebook\\Adam-s-Notebook-ASP.NET-API\\Adam-s-Notebook-ASP.NET-API\\Program.cs",
+              "RelativeToolTip": "Adam-s-Notebook-ASP.NET-API\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T15:37:02.368Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "ModelContext.cs",
               "DocumentMoniker": "C:\\Sharkore\\Web\\AdamNotebook\\Adam-s-Notebook-ASP.NET-API\\Adam-s-Notebook-ASP.NET-API\\Model\\ModelContext.cs",
               "RelativeDocumentMoniker": "Adam-s-Notebook-ASP.NET-API\\Model\\ModelContext.cs",
               "ToolTip": "C:\\Sharkore\\Web\\AdamNotebook\\Adam-s-Notebook-ASP.NET-API\\Adam-s-Notebook-ASP.NET-API\\Model\\ModelContext.cs",
               "RelativeToolTip": "Adam-s-Notebook-ASP.NET-API\\Model\\ModelContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-17T15:43:02.438Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Model.cs",
-              "DocumentMoniker": "C:\\Sharkore\\Web\\AdamNotebook\\Adam-s-Notebook-ASP.NET-API\\Adam-s-Notebook-ASP.NET-API\\Model\\Model.cs",
-              "RelativeDocumentMoniker": "Adam-s-Notebook-ASP.NET-API\\Model\\Model.cs",
-              "ToolTip": "C:\\Sharkore\\Web\\AdamNotebook\\Adam-s-Notebook-ASP.NET-API\\Adam-s-Notebook-ASP.NET-API\\Model\\Model.cs",
-              "RelativeToolTip": "Adam-s-Notebook-ASP.NET-API\\Model\\Model.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAsAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "ThreedModel.cs",
+              "DocumentMoniker": "C:\\Sharkore\\Web\\AdamNotebook\\Adam-s-Notebook-ASP.NET-API\\Adam-s-Notebook-ASP.NET-API\\Model\\ThreedModel.cs",
+              "RelativeDocumentMoniker": "Adam-s-Notebook-ASP.NET-API\\Model\\ThreedModel.cs",
+              "ToolTip": "C:\\Sharkore\\Web\\AdamNotebook\\Adam-s-Notebook-ASP.NET-API\\Adam-s-Notebook-ASP.NET-API\\Model\\ThreedModel.cs",
+              "RelativeToolTip": "Adam-s-Notebook-ASP.NET-API\\Model\\ThreedModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-17T15:40:49.079Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Sharkore\\Web\\AdamNotebook\\Adam-s-Notebook-ASP.NET-API\\Adam-s-Notebook-ASP.NET-API\\Program.cs",
-              "RelativeDocumentMoniker": "Adam-s-Notebook-ASP.NET-API\\Program.cs",
-              "ToolTip": "C:\\Sharkore\\Web\\AdamNotebook\\Adam-s-Notebook-ASP.NET-API\\Adam-s-Notebook-ASP.NET-API\\Program.cs",
-              "RelativeToolTip": "Adam-s-Notebook-ASP.NET-API\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T15:37:02.368Z",
               "EditorCaption": ""
             }
           ]

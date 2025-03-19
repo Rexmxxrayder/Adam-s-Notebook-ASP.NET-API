@@ -1,3 +1,6 @@
+using Adam_s_Notebook_ASP.NET_API.Model;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddCors(options =>
@@ -8,6 +11,10 @@ builder.Services.AddCors(options =>
               .AllowAnyMethod()
               .AllowAnyHeader();
     });
+});
+
+builder.Services.AddDbContext<ModelContext>(options => {
+    options.UseSqlServer("Server=ANOMALOCARIS;Database=Models;Trusted_Connection=True;TrustServerCertificate=True;");
 });
 
 
