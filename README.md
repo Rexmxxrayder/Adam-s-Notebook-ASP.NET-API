@@ -1,1 +1,1 @@
-Don't forget app.settings.json is not in the repo.
+Don't forget appsettings.json and appsettings.Development.json are not in the repo.

@@ -1,12 +1,10 @@
-﻿using System.ComponentModel;
+using System.ComponentModel;
+using Adam_s_Notebook_ASP.NET_API.Model;
 using System.ComponentModel.DataAnnotations;
 
-namespace Adam_s_Notebook_ASP.NET_API.Model
-{
-    public class Mesh
+namespace Adam_s_Notebook_ASP.NET_API.Dtos{
+    public class MeshCreateDto
     {
-        [Key]
-        public int Id { get; set; }
         [MaxLength(250)]
         public string Name { get; set; }
         public string Path { get; set; }

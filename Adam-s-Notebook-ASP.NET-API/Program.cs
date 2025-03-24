@@ -4,10 +4,21 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Configuration
-    .SetBasePath(Directory.GetCurrentDirectory())
+builder.Configuration.SetBasePath(Directory.GetCurrentDirectory())
     .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
     .AddEnvironmentVariables();
+
+var connectionString = Environment.GetEnvironmentVariable("DB_CONNECTION_STRING_ADAMSNOTEBOOKAPI");
+
+if (!string.IsNullOrEmpty(connectionString))
+{
+    builder.Configuration["ConnectionStrings:CommanderConnection"] = connectionString;
+}
+
+builder.Services.AddDbContext<AssetContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("CommanderConnection"));
+});
 
 builder.Services.AddCors(options =>
 {
@@ -19,13 +30,12 @@ builder.Services.AddCors(options =>
     });
 });
 
-builder.Services.AddDbContext<MeshContext>(options => {
-    options.UseSqlServer("Server=ANOMALOCARIS;Database=Models;Trusted_Connection=True;TrustServerCertificate=True;");
-});
 
 builder.Services.AddControllers();
 
-builder.Services.AddScoped<IMeshRepo, MockMeshRepo>();
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
+builder.Services.AddScoped<IAssetRepo, SqlAssetRepo>();
 
 var app = builder.Build();
 
