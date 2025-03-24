@@ -1,7 +1,7 @@
 ﻿using System.Data;
 
 namespace Adam_s_Notebook_ASP.NET_API.Model {
-    public class Texture {
+    public class Image {
         public int Id { get; set; }
         public string Name { get; set; }
         public string Path { get; set; }
