@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Adam-s-Notebook-ASP.NET-API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8cfa11fbdb401e27b9a6aa8551a3de28d9a44beb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+03110f54e42713457d25aaec96a9f12ab27d276e")]
 [assembly: System.Reflection.AssemblyProductAttribute("Adam-s-Notebook-ASP.NET-API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Adam-s-Notebook-ASP.NET-API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

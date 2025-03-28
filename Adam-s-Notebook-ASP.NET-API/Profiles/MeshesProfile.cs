@@ -7,6 +7,8 @@ namespace Adam_s_Notebook_ASP.NET_API.Profiles{
         public MeshesProfiles(){
             CreateMap<Mesh, MeshReadDto>();
             CreateMap<MeshCreateDto, Mesh>();
+            CreateMap<MeshUpdateDto, Mesh>();
+            CreateMap<Mesh, MeshUpdateDto>();
         }
     }
 }

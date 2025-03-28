@@ -1,6 +1,7 @@
 using Adam_s_Notebook_ASP.NET_API.Data;
 using Adam_s_Notebook_ASP.NET_API.Model;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,6 +15,8 @@ if (!string.IsNullOrEmpty(connectionString))
 {
     builder.Configuration["ConnectionStrings:CommanderConnection"] = connectionString;
 }
+
+builder.Services.Configure<FilePaths>(builder.Configuration.GetSection("FilePaths"));
 
 builder.Services.AddDbContext<AssetContext>(options =>
 {
@@ -31,11 +34,14 @@ builder.Services.AddCors(options =>
 });
 
 
-builder.Services.AddControllers();
+builder.Services.AddControllers().AddNewtonsoftJson(s => {
+    s.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+});
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
-builder.Services.AddScoped<IAssetRepo, SqlAssetRepo>();
+builder.Services.AddScoped<IAssetRepo<Mesh>, SqlMeshRepo>();
+builder.Services.AddScoped<IAssetRepo<Image>, SqlImageRepo>();
 
 var app = builder.Build();
 
