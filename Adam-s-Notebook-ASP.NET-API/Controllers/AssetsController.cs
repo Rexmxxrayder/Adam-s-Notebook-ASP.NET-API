@@ -9,16 +9,15 @@ using Microsoft.Extensions.Options;
 
 namespace Adam_s_Notebook_ASP.NET_API.Controllers
 {
-    [Route("api/mesh")]
+    [Route("api/asset")]
     [ApiController]
-    public class MeshesController : ControllerBase
+    public class AssetsController : ControllerBase
     {
-        private readonly IAssetRepo<Mesh> _repository;
+        private readonly IAssetRepo _repository;
         private readonly IMapper _mapper;
-
         private readonly FilePaths _filePaths;
 
-        public MeshesController(IAssetRepo<Mesh> repository, IMapper mapper, IOptions<FilePaths> filePaths)
+        public AssetsController(IAssetRepo repository, IMapper mapper, IOptions<FilePaths> filePaths)
         {
             _repository = repository;
             _mapper = mapper;
@@ -26,19 +25,19 @@ namespace Adam_s_Notebook_ASP.NET_API.Controllers
         }
 
         [HttpGet]
-        public ActionResult<IEnumerable<MeshReadDto>> GetAllMeshes()
+        public ActionResult<IEnumerable<AssetReadDto>> GetAllAssets()
         {
             var meshItems = _repository.GetAssets();
-            return Ok(_mapper.Map<IEnumerable<MeshReadDto>>(meshItems));
+            return Ok(_mapper.Map<IEnumerable<AssetReadDto>>(meshItems));
         }
 
-        [HttpGet("{id}", Name = "GetMeshById")]
-        public ActionResult<MeshReadDto> GetMeshById(int id)
+        [HttpGet("{id}", Name = "GetAssetById")]
+        public ActionResult<AssetReadDto> GetAssetById(int id)
         {
             var meshItem = _repository.GetAssetById(id);
             if (meshItem != null)
             {
-                return Ok(_mapper.Map<MeshReadDto>(meshItem));
+                return Ok(_mapper.Map<AssetReadDto>(meshItem));
             }
 
             return NotFound();
@@ -46,7 +45,7 @@ namespace Adam_s_Notebook_ASP.NET_API.Controllers
 
 
         [HttpGet("/search")]
-        public ActionResult GetMesh([FromQuery] string name)
+        public ActionResult GetAssetByName([FromQuery] string name)
         {
             if (string.IsNullOrEmpty(name))
             {
@@ -63,13 +62,13 @@ namespace Adam_s_Notebook_ASP.NET_API.Controllers
             return Ok(meshes);
         }
 
-        [HttpGet("{id}/download", Name = "DownloadMesh")]
-        public async Task<ActionResult> DownloadMesh(int id)
+        [HttpGet("{id}/download", Name = "DownloadAsset")]
+        public async Task<ActionResult> DownloadAsset(int id)
         {
             var meshItem = _repository.GetAssetById(id);
             if (meshItem == null)
             {
-                return NotFound("Mesh not found.");
+                return NotFound("Asset not found.");
             }
 
             string path = GetAbsolutePath(meshItem.Path);
@@ -85,18 +84,18 @@ namespace Adam_s_Notebook_ASP.NET_API.Controllers
         }
 
         [HttpPost]
-        public ActionResult<MeshReadDto> CreateMesh(MeshCreateDto meshCreateDto)
+        public ActionResult<AssetReadDto> CreateAsset(AssetCreateDto meshCreateDto)
         {
-            var meshModel = _mapper.Map<Mesh>(meshCreateDto);
+            var meshModel = _mapper.Map<Asset>(meshCreateDto);
             _repository.CreateAsset(meshModel);
             _repository.SaveChanges();
 
-            var meshReadDto = _mapper.Map<MeshReadDto>(meshModel);
-            return CreatedAtRoute(nameof(GetMeshById), new { Id = meshReadDto.Id }, meshReadDto);
+            var meshReadDto = _mapper.Map<AssetReadDto>(meshModel);
+            return CreatedAtRoute(nameof(GetAssetById), new { Id = meshReadDto.Id }, meshReadDto);
         }
 
         [HttpPut("{id}")]
-        public ActionResult UpdateMesh(int id, MeshUpdateDto meshUpdateDto)
+        public ActionResult UpdateAsset(int id, AssetUpdateDto meshUpdateDto)
         {
             var meshModelFromRepo = _repository.GetAssetById(id);
             if (meshModelFromRepo == null)
@@ -114,7 +113,7 @@ namespace Adam_s_Notebook_ASP.NET_API.Controllers
         }
 
         [HttpPatch("{id}")]
-        public ActionResult PartialMeshUpdate(int id, JsonPatchDocument<MeshUpdateDto> patchDto)
+        public ActionResult PartialAssetUpdate(int id, JsonPatchDocument<AssetUpdateDto> patchDto)
         {
             var meshModelFromRepo = _repository.GetAssetById(id);
             if (meshModelFromRepo == null)
@@ -122,7 +121,7 @@ namespace Adam_s_Notebook_ASP.NET_API.Controllers
                 return NotFound();
             }
 
-            var meshToPatch = _mapper.Map<MeshUpdateDto>(meshModelFromRepo);
+            var meshToPatch = _mapper.Map<AssetUpdateDto>(meshModelFromRepo);
             patchDto.ApplyTo(meshToPatch, ModelState);
 
             if (!TryValidateModel(meshToPatch))
@@ -140,7 +139,7 @@ namespace Adam_s_Notebook_ASP.NET_API.Controllers
         }
 
         [HttpDelete("{id}")]
-        public ActionResult DeleteMesh(int id)
+        public ActionResult DeleteAsset(int id)
         {
             var meshModelFromRepo = _repository.GetAssetById(id);
             if (meshModelFromRepo == null)
@@ -160,12 +159,18 @@ namespace Adam_s_Notebook_ASP.NET_API.Controllers
             {
                 "model/gltf-binary" => ".glb",
                 "application/x-fbx" => ".fbx",
+                "image/png" => ".png",
+                "image/jpeg" => ".jpeg",
                 _ => "",
             };
         }
 
         private string GetAbsolutePath(string relativePath)
         {
+            if(_filePaths == null || _filePaths.SrcPath == null){
+                throw new ArgumentNullException("Src Path Null");
+            }
+
             return Path.Combine(_filePaths.SrcPath, relativePath.TrimStart('/'));
         }
     }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "j4xEbR8VZto=",
+  "dgSpecHash": "71APrNffDMU=",
   "success": true,
-  "projectFilePath": "c:\\Sharkore\\Web\\AdamNotebook\\Adam-s-Notebook-ASP.NET-API\\Adam-s-Notebook-ASP.NET-API\\Adam-s-Notebook-ASP.NET-API.csproj",
+  "projectFilePath": "C:\\Sharkore\\Web\\AdamNotebook\\Adam-s-Notebook-ASP.NET-API\\Adam-s-Notebook-ASP.NET-API\\Adam-s-Notebook-ASP.NET-API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\julie\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\julie\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

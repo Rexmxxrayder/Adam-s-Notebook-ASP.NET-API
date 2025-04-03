@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Adam_s_Notebook_ASP.NET_API.Migrations
 {
     [DbContext(typeof(AssetContext))]
-    [Migration("20250324140109_InitialMigration")]
+    [Migration("20250403123549_InitialMigration")]
     partial class InitialMigration
     {
         /// <inheritdoc />
@@ -24,7 +24,7 @@ namespace Adam_s_Notebook_ASP.NET_API.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("Adam_s_Notebook_ASP.NET_API.Model.Image", b =>
+            modelBuilder.Entity("Adam_s_Notebook_ASP.NET_API.Model.Asset", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -32,43 +32,8 @@ namespace Adam_s_Notebook_ASP.NET_API.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Description")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Dimension")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Format")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("MeshId")
+                    b.Property<int?>("AssetId")
                         .HasColumnType("int");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(250)
-                        .HasColumnType("nvarchar(250)");
-
-                    b.Property<string>("Path")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("MeshId");
-
-                    b.ToTable("Images");
-                });
-
-            modelBuilder.Entity("Adam_s_Notebook_ASP.NET_API.Model.Mesh", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
@@ -90,21 +55,26 @@ namespace Adam_s_Notebook_ASP.NET_API.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("Type")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
-                    b.ToTable("Meshes");
+                    b.HasIndex("AssetId");
+
+                    b.ToTable("Assets");
                 });
 
-            modelBuilder.Entity("Adam_s_Notebook_ASP.NET_API.Model.Image", b =>
+            modelBuilder.Entity("Adam_s_Notebook_ASP.NET_API.Model.Asset", b =>
                 {
-                    b.HasOne("Adam_s_Notebook_ASP.NET_API.Model.Mesh", null)
-                        .WithMany("Textures")
-                        .HasForeignKey("MeshId");
+                    b.HasOne("Adam_s_Notebook_ASP.NET_API.Model.Asset", null)
+                        .WithMany("LinkedAssets")
+                        .HasForeignKey("AssetId");
                 });
 
-            modelBuilder.Entity("Adam_s_Notebook_ASP.NET_API.Model.Mesh", b =>
+            modelBuilder.Entity("Adam_s_Notebook_ASP.NET_API.Model.Asset", b =>
                 {
-                    b.Navigation("Textures");
+                    b.Navigation("LinkedAssets");
                 });
 #pragma warning restore 612, 618
         }

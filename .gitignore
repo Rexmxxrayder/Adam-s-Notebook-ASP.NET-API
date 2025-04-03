@@ -13,8 +13,8 @@ logs
 *.sln
 *.sw?
 
-#Data
-Data
+#src
+src
 
 #Security
 Adam-s-Notebook-ASP.NET-API/appsettings.json

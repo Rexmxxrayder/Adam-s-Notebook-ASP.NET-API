@@ -13,14 +13,14 @@ var connectionString = Environment.GetEnvironmentVariable("DB_CONNECTION_STRING_
 
 if (!string.IsNullOrEmpty(connectionString))
 {
-    builder.Configuration["ConnectionStrings:CommanderConnection"] = connectionString;
+    builder.Configuration["ConnectionStrings:DbConnection"] = connectionString;
 }
 
 builder.Services.Configure<FilePaths>(builder.Configuration.GetSection("FilePaths"));
 
 builder.Services.AddDbContext<AssetContext>(options =>
 {
-    options.UseSqlServer(builder.Configuration.GetConnectionString("CommanderConnection"));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DbConnection"));
 });
 
 builder.Services.AddCors(options =>
@@ -40,28 +40,11 @@ builder.Services.AddControllers().AddNewtonsoftJson(s => {
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
-builder.Services.AddScoped<IAssetRepo<Mesh>, SqlMeshRepo>();
-builder.Services.AddScoped<IAssetRepo<Image>, SqlImageRepo>();
+builder.Services.AddScoped<IAssetRepo, SqlAssetRepo>();
 
 var app = builder.Build();
 
 app.UseCors("AllowAllOrigins");
-
-app.MapGet("/api/model", async () =>
-{
-    var filePath = "C://Sharkore//Web//AdamNotebook//Adam-s-Notebook-ASP.NET-API//Adam-s-Notebook-ASP.NET-API//Data//Models3D//LetterBoss//LetterBoss.glb";
-
-    if (File.Exists(filePath))
-    {
-        var fileBytes = await File.ReadAllBytesAsync(filePath);
-        return Results.File(fileBytes, "application/x-fbx", "LetterBoss.fbx");
-    }
-    else
-    {
-        return Results.NotFound("File not found");
-    }
-});
-
 
 app.UseHttpsRedirection();
 app.UseAuthorization();
